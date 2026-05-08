@@ -6,6 +6,7 @@ Primitive plugin to log players join/leave viz discord webhooks. Integrates with
 
 ![img_1.png](assets/img_1.png)
 
-Target: Paper 26.x  
+Target: Paper-based 26.x  
 Java: 25
 
+Folia supported!

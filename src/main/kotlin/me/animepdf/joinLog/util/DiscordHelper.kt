@@ -9,7 +9,7 @@ class DiscordHelper(
     val plugin: JoinLogPlugin
 ) {
     fun sendEmbedAsync(playerName: String, actionText: String, headUrl: String, colorDecimal: Int) {
-        plugin.server.scheduler.runTaskAsynchronously(plugin, Runnable {
+        plugin.server.asyncScheduler.runNow(plugin) { _ ->
             try {
                 val jsonPayload = """
                 {
@@ -39,6 +39,6 @@ class DiscordHelper(
             } catch (e: Exception) {
                 plugin.logger.warning("Error sending webhook: ${e.message}")
             }
-        })
+        }
     }
 }
