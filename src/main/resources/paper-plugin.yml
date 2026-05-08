@@ -1,0 +1,26 @@
+name: JoinLog
+version: '${version}'
+main: me.animepdf.joinLog.JoinLogPlugin
+loader: me.animepdf.joinLog.JoinLogLoader
+api-version: '26.1'
+prefix: JoinLog
+authors: [ Makin ]
+description: Sends a Discord webhook when players join or leave.
+
+commands:
+  joinlog:
+    description: Main joinlog command
+    usage: /joinlog reload
+    permission: joinlog.admin
+
+permissions:
+  joinlog.admin:
+    description: Allow access to joinlog admin commands
+    default: op
+
+dependencies:
+  server:
+    SkinsRestorer:
+      load: BEFORE
+      required: false
+      join-classpath: true
