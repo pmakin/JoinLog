@@ -8,7 +8,7 @@ import java.net.http.HttpResponse
 class DiscordHelper(
     val plugin: JoinLogPlugin
 ) {
-    fun sendEmbedAsync(playerName: String, actionText: String, headUrl: String, colorDecimal: Int) {
+    fun sendEmbedAsync(actionText: String, headUrl: String, colorDecimal: Int) {
         plugin.server.asyncScheduler.runNow(plugin) { _ ->
             try {
                 val jsonPayload = """

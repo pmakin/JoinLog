@@ -19,7 +19,7 @@ class PlayerListener(
         val playerName = event.player.name
         val message = plugin.config.joinMessage.replace("%username%", playerName)
 
-        plugin.discordHelper.sendEmbedAsync(playerName, message, headUrl, plugin.config.joinMessageColor)
+        plugin.discordHelper.sendEmbedAsync(message, headUrl, plugin.config.joinMessageColor)
     }
 
     @EventHandler
@@ -31,6 +31,6 @@ class PlayerListener(
         val playerName = event.player.name
         val message = plugin.config.leaveMessage.replace("%username%", playerName)
 
-        plugin.discordHelper.sendEmbedAsync(playerName, message, headUrl, plugin.config.leaveMessageColor)
+        plugin.discordHelper.sendEmbedAsync(message, headUrl, plugin.config.leaveMessageColor)
     }
 }
